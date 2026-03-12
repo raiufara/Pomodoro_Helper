@@ -69,7 +69,8 @@
                     <h2 class="text-lg font-bold text-gray-700 flex items-center gap-2">
                         <span class="text-xl">⏳</span> ポモドーロタイマー
                     </h2>
-                    <span id="pomo-status-label" class="px-4 py-1.5 rounded-full text-xs font-bold bg-gray-100 text-gray-500 shadow-sm">待機中</span>
+                    <!-- Sensei's Update: サイズをビジネスモードと同じ text-sm に変更し、枠線も統一しました -->
+                    <span id="pomo-status-label" class="text-sm font-bold text-gray-400 bg-gray-100 px-4 py-1.5 rounded-full inline-block border border-gray-200 shadow-sm transition-colors">待機中</span>
                 </div>
 
                 <!-- 設定エリア -->
@@ -111,7 +112,7 @@
                         <!-- 終了時刻 -->
                         <div class="text-sm font-bold text-gray-700 whitespace-nowrap pl-2">終了時刻</div>
                         <div class="flex items-center gap-2">
-                            <input type="time" id="pomo-end-time-input" class="w-32 p-2 bg-white border border-gray-200 rounded-lg text-center focus:outline-none focus:ring-2 focus:ring-personal transition-shadow font-mono text-sm">
+                            <input type="time" id="pomo-end-time-input" class="w-32 p-2 bg-white border border-gray-200 rounded-lg text-center focus:outline-none focus:ring-2 focus:ring-personal transition-shadow font-mono text-sm text-gray-700">
                         </div>
                         <button id="pomo-reset-end-time-btn" class="p-2 text-gray-400 hover:text-personal hover:bg-personal/10 rounded-lg transition-colors active:scale-95" title="終了時刻をクリア">
                             <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -244,7 +245,7 @@
                             <!-- 時刻 -->
                             <div class="flex items-center gap-1">
                                 <span class="text-gray-500 font-bold text-sm mr-1">時刻</span>
-                                <input type="time" id="alarm-time-input" class="w-28 p-2 bg-white border border-gray-200 rounded-lg text-center focus:outline-none focus:ring-2 focus:ring-business font-mono text-lg transition-shadow">
+                                <input type="time" id="alarm-time-input" class="w-28 p-2 bg-white border border-gray-200 rounded-lg text-center focus:outline-none focus:ring-2 focus:ring-business font-mono text-lg transition-shadow text-gray-700">
                                 <button id="alarm-reset-time-btn" class="p-2 ml-1 text-gray-400 hover:text-business hover:bg-business/10 rounded-lg transition-colors active:scale-95" title="時刻をクリア">
                                     <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
@@ -280,7 +281,7 @@
                     <h2 class="text-lg font-bold text-gray-700 flex items-center gap-2">
                         <span class="text-xl">💼</span> 会議管理タイマー
                     </h2>
-                    <!-- ステータス表示 (時刻アラームと統一) -->
+                    <!-- ステータス表示 -->
                     <span id="meet-status-label" class="text-sm font-bold text-gray-400 bg-gray-100 px-4 py-1.5 rounded-full inline-block border border-gray-200 shadow-sm transition-colors">待機中</span>
                 </div>
 
@@ -292,7 +293,7 @@
                         <!-- 開始予定 -->
                         <div class="flex items-center gap-1">
                             <span class="text-sm font-bold text-gray-700 w-20">開始予定</span>
-                            <input type="time" id="meet-start-input" class="w-28 p-2 bg-white border border-gray-200 rounded-lg text-center focus:outline-none focus:ring-2 focus:ring-business transition-shadow font-mono text-lg">
+                            <input type="time" id="meet-start-input" class="w-28 p-2 bg-white border border-gray-200 rounded-lg text-center focus:outline-none focus:ring-2 focus:ring-business transition-shadow font-mono text-lg text-gray-700">
                             <button id="meet-reset-start-btn" class="p-2 ml-1 text-gray-400 hover:text-business hover:bg-business/10 rounded-lg transition-colors active:scale-95" title="開始予定をクリア">
                                 <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" /></svg>
                             </button>
@@ -325,13 +326,13 @@
                         <div id="meet-current-time" class="text-4xl md:text-5xl font-mono font-bold text-gray-600 drop-shadow-sm">00:00:00</div>
                     </div>
 
-                    <!-- 中央: 経過時間 (少し控えめに) -->
+                    <!-- 中央: 経過時間 -->
                     <div class="flex-shrink-0 text-center">
                         <div class="text-sm font-bold text-gray-700 mb-2">経過時間</div>
                         <div id="meeting-time-display" class="text-2xl md:text-3xl font-mono font-bold text-gray-400 drop-shadow-sm">00:00:00</div>
                     </div>
 
-                    <!-- 右: 残り時間 (メインとして強調) -->
+                    <!-- 右: 残り時間 -->
                     <div class="flex-1 flex flex-col items-center justify-center">
                         <div class="text-sm font-bold text-gray-700 mb-2">残り時間</div>
                         <div id="meeting-remain-display" class="text-4xl md:text-5xl font-mono font-bold text-gray-600 drop-shadow-sm">--:--:--</div>
@@ -342,7 +343,6 @@
                 <div class="flex justify-center gap-4 mb-2">
                     <button id="meeting-start-btn" class="bg-business text-white px-10 py-3.5 rounded-full font-bold shadow-md hover:shadow-lg hover:bg-blue-700 active:scale-95 transition-all w-full md:w-auto">会議開始</button>
                     <button id="meeting-pause-btn" class="bg-business text-white px-10 py-3.5 rounded-full font-bold shadow-md hover:shadow-lg hover:bg-blue-700 active:scale-95 transition-all hidden w-full md:w-auto">一時停止</button>
-                    <!-- 終了ボタンに変更 -->
                     <button id="meeting-reset-btn" class="bg-gray-200 text-gray-700 px-10 py-3.5 rounded-full font-bold hover:bg-gray-300 active:scale-95 transition-all w-full md:w-auto">終了</button>
                 </div>
             </div>
@@ -367,6 +367,11 @@
         </div>
 
     </main>
+
+    <!-- Sensei's Update: 画面下部にコピーライトを追加しました -->
+    <footer class="mt-auto py-6 text-center">
+        <p class="text-sm text-gray-500 font-medium">&copy; 2026 FTF Engineers All rights reserved.</p>
+    </footer>
 
     <!-- カスタム確認・通知モーダル -->
     <div id="confirm-modal" class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm hidden flex items-center justify-center z-50 transition-opacity">
@@ -727,13 +732,14 @@
                     const progress = this.totalSeconds > 0 ? (elapsed / this.totalSeconds) * 100 : 0;
                     this.progressBar.style.width = `${progress}%`;
 
+                    // Sensei's Update: ビジネスモードに合わせて text-sm と inline-block などを揃えました
                     if (this.mode === 'work') {
                         this.statusLabel.textContent = '集中';
-                        this.statusLabel.className = 'px-4 py-1.5 rounded-full text-xs font-bold bg-personal text-white shadow-sm';
+                        this.statusLabel.className = 'text-sm font-bold text-white bg-personal px-4 py-1.5 rounded-full inline-block shadow-sm transition-colors';
                         this.progressBar.className = 'bg-personal h-4 rounded-full transition-all duration-1000 ease-linear shadow-sm';
                     } else {
                         this.statusLabel.textContent = '休憩';
-                        this.statusLabel.className = 'px-4 py-1.5 rounded-full text-xs font-bold bg-emerald-500 text-white shadow-sm';
+                        this.statusLabel.className = 'text-sm font-bold text-white bg-emerald-500 px-4 py-1.5 rounded-full inline-block shadow-sm transition-colors';
                         this.progressBar.className = 'bg-emerald-500 h-4 rounded-full transition-all duration-1000 ease-linear shadow-sm';
                     }
                 },
@@ -752,14 +758,17 @@
                     }
                 },
 
-                setMode(mode) {
+                // Sensei's Update: 手動変更時は音を鳴らさないように引数 `playSound` を追加しました
+                setMode(mode, playSound = false) {
                     this.mode = mode;
                     const m = parseInt(mode === 'work' ? this.workInput.value : this.breakInput.value) || 0;
                     this.totalSeconds = m * 60;
                     this.timeLeft = this.totalSeconds;
                     this.updateUI();
                     
-                    try { playAmbientSound(); } catch(e) {} 
+                    if (playSound) {
+                        try { playAmbientSound(); } catch(e) {} 
+                    }
                 },
 
                 checkLimits() {
@@ -779,7 +788,7 @@
 
                 finish(message) {
                     this.pause();
-                    this.setMode('work');
+                    this.setMode('work', false); // 終了時はビープ音が鳴るので環境音は不要です
                     this.currentSet = 1;
                     this.updateSetStatus();
                     playBeepSound();
@@ -792,7 +801,7 @@
                     getAudioContext();
                     
                     if (this.timeLeft === this.totalSeconds && this.totalSeconds !== parseInt(this.workInput.value)*60 && this.mode === 'work') {
-                         this.setMode('work');
+                         this.setMode('work', false);
                     }
 
                     this.isRunning = true;
@@ -817,12 +826,13 @@
                                     this.finish(`目標の ${limit} セットを達成しました！素晴らしい集中力です。`);
                                     return;
                                 } else {
-                                    this.setMode('break');
+                                    // Sensei's Update: タイマーがゼロになって自動で切り替わる時だけ音を鳴らします
+                                    this.setMode('break', true);
                                 }
                             } else {
                                 this.currentSet++;
                                 this.updateSetStatus();
-                                this.setMode('work');
+                                this.setMode('work', true);
                             }
                         }
                         this.updateUI();
@@ -842,7 +852,7 @@
                     this.pause();
                     this.currentSet = 1;
                     this.startBtn.textContent = 'スタート';
-                    this.setMode('work');
+                    this.setMode('work', false); // 手動リセット時は音を鳴らしません
                     this.updateSetStatus();
                 },
 

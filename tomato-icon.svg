@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
+  <title id="title">MinimaPomoTimer icon</title>
+  <desc id="desc">A rounded app icon with a segmented timer ring, tomato body, green calyx, and timer hand.</desc>
+  <defs>
+    <linearGradient id="tileBg" x1="16" x2="80" y1="12" y2="84" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fffdf9"/>
+      <stop offset="1" stop-color="#f5e9dc"/>
+    </linearGradient>
+    <linearGradient id="ringWarm" x1="31" x2="72" y1="24" y2="33" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffd08a"/>
+      <stop offset="1" stop-color="#ff8a2e"/>
+    </linearGradient>
+    <linearGradient id="ringWarmSoft" x1="18" x2="38" y1="30" y2="46" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f9dcc0"/>
+      <stop offset="1" stop-color="#f3c691"/>
+    </linearGradient>
+    <linearGradient id="ringBase" x1="24" x2="72" y1="60" y2="72" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f2dcc7"/>
+      <stop offset="1" stop-color="#ead0b6"/>
+    </linearGradient>
+    <linearGradient id="tomatoBody" x1="28" x2="69" y1="34" y2="75" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff5b43"/>
+      <stop offset="1" stop-color="#ef392a"/>
+    </linearGradient>
+    <linearGradient id="tomatoShade" x1="56" x2="72" y1="43" y2="72" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#c8281a" stop-opacity="0"/>
+      <stop offset="1" stop-color="#b71f15" stop-opacity=".32"/>
+    </linearGradient>
+    <linearGradient id="calyxGreen" x1="37" x2="61" y1="24" y2="40" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#73d84a"/>
+      <stop offset="1" stop-color="#41aa2d"/>
+    </linearGradient>
+    <filter id="tileShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#332117" flood-opacity=".18"/>
+    </filter>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#6e2719" flood-opacity=".16"/>
+    </filter>
+    <filter id="handShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#6e2719" flood-opacity=".2"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#tileShadow)">
+    <rect x="8" y="8" width="80" height="80" rx="23" fill="url(#tileBg)"/>
+    <rect x="8.75" y="8.75" width="78.5" height="78.5" rx="22.25" fill="none" stroke="#ecdac9" stroke-opacity=".9"/>
+  </g>
+
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#softShadow)">
+    <path d="M24.31 71.69A33.5 33.5 0 0 1 25.58 23.1" stroke="url(#ringWarmSoft)" stroke-width="7.2"/>
+    <path d="M30.25 19.59A33.5 33.5 0 0 1 74.4 27.38" stroke="url(#ringWarm)" stroke-width="7.2"/>
+    <path d="M77.3 31.76A33.5 33.5 0 0 1 78.6 61.63" stroke="#ff8a2e" stroke-width="7.2"/>
+    <path d="M71.27 72.1A33.5 33.5 0 0 1 19.59 65.75" stroke="url(#ringBase)" stroke-width="7.2"/>
+    <path d="M15.8 57.23A33.5 33.5 0 0 1 20.9 28.31" stroke="#efd6be" stroke-width="7.2"/>
+  </g>
+
+  <ellipse cx="48" cy="74.5" rx="16.5" ry="4.8" fill="#d8c1aa" opacity=".22"/>
+
+  <g filter="url(#softShadow)">
+    <circle cx="48" cy="54" r="25.4" fill="url(#tomatoBody)"/>
+    <path fill="url(#tomatoShade)" d="M61.5 32.4c7.5 3.7 12.2 11.1 12.2 20.6 0 12-8.1 21.4-20.5 24.1 8.4-4.2 13.1-11.2 13.3-20.1.1-7.1-1.5-14.5-5-24.6Z"/>
+  </g>
+
+  <g transform="translate(0 -1.2)" fill="url(#calyxGreen)" filter="url(#softShadow)">
+    <rect x="45.4" y="18.4" width="5.2" height="16" rx="2.6"/>
+    <path d="M47.8 30.5c-6.2-5.7-12.6-6.8-18.2-5.8 2.4 5 7.1 8.4 14.2 9.4Z"/>
+    <path d="M48 30.4c-3.8-7.8-1.5-12.2 0-14.6 1.8 2.6 3.7 6.8 0 14.6Z"/>
+    <path d="M48.2 30.5c6.2-5.7 12.6-6.8 18.2-5.8-2.4 5-7.1 8.4-14.2 9.4Z"/>
+    <path d="M46.6 31.2c-4.8 1.4-8 4.6-9.2 9.1 4.6-.6 8.1-3 10-7.7Z"/>
+    <path d="M49.4 31.2c4.8 1.4 8 4.6 9.2 9.1-4.6-.6-8.1-3-10-7.7Z"/>
+  </g>
+
+  <g filter="url(#handShadow)">
+    <path fill="#fffdfa" d="M49.6 53.2 64.9 37.8c1.2-1.2 3-1.3 4.2-.2 1.1 1 1.2 2.8.2 4L53.7 58.8c-.9 1-2.2 1.4-3.5 1.2l-3-.5c-1.3-.2-1.9-1.8-1-2.7l3.4-3.6Z"/>
+    <circle cx="48" cy="54" r="5.8" fill="#fffdfa"/>
+  </g>
+</svg>
